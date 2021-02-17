@@ -4,8 +4,8 @@
 using namespace std;
 int main() {
 	setlocale(LC_ALL, "Turkish");
-	int yardýmcý1;
-	int yardýmcý2;
+	int yardimci1;
+	int yardimci2;
 	int gelir;
 	int gider;
 	int gelirtoplam = 0;
@@ -14,12 +14,12 @@ int main() {
 	
 
 
-	cout << "Kaç tane geliriniz var : ";
+	cout << "KaÃ§ tane geliriniz var : ";
 	cin >> gelir ;
 	
 	cout << " " << endl;
 
-	cout << "Kaç tane gideriniz var : ";
+	cout << "KaÃ§ tane gideriniz var : ";
 	cin >> gider;
 	
 	cout << " " << endl;
@@ -28,8 +28,8 @@ int main() {
 	{ 
 		cout << "Gelirinizi Giriniz: ";
 		
-		cin >> yardýmcý1;
-		gelirtoplam = gelirtoplam + yardýmcý1;
+		cin >> yardimci1;
+		gelirtoplam = gelirtoplam + yardimci1;
 	}
 
 	cout << " " << endl;
@@ -37,18 +37,29 @@ int main() {
 	for (int i = 0; i < gider; i++)
 	{
 		cout << "Gidirenizi Giriniz: ";
-		cin >> yardýmcý2;
-		gidertoplam = gidertoplam + yardýmcý2;
+		cin >> yardimci2;
+		gidertoplam = gidertoplam + yardimci2;
 	}
 
-     int kar;
-	 kar = gelirtoplam - gidertoplam; 
-
+     int karvezarar;
+	 karvezarar = gelirtoplam - gidertoplam; 
+	 
 	cout << " " << endl;
-
+	
+	
 	cout << "Toplam geliriniz : " << gelirtoplam << endl;
 	cout << "Toplam gideriniz :" << gidertoplam << endl;
-	cout << "Toplam kar ýnýz :" << kar ;
+	
+
+	if (karvezarar < 0) {
+		cout << "ZararÄ±nÄ±z: " << karvezarar;
+	}
+	else {
+
+    cout << "Toplam kar Ä±nÄ±z :" << karvezarar ;
+
+  	}
+
 
 	return 0;
 }
